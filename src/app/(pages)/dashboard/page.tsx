@@ -1,3 +1,4 @@
+import { Reports } from "@/components/reports/reports";
 import { Metadata } from "next"
 
 
@@ -10,7 +11,9 @@ export default function DashboardPage() {
 
     return (
         <section>
-            <h1>Dashboard</h1>
+            <section className="p-4 space-y-4">
+                <Reports/>
+            </section>
         </section>
     )
 }

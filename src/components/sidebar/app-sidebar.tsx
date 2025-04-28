@@ -80,7 +80,7 @@ export function AppSidebar({ ...props }: SidebarType) {
     return (
         <Sidebar {...props}>
             <SidebarHeader>
-                <div className="flex items-center py-3">
+                <div className="flex items-center py-3 gap-2">
                     <Image src="icon.svg" alt="Logo" width={32} height={32} />
                     <span
                         className="text-xl font-semibold text-slate-600 tracking-tight
