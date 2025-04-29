@@ -61,7 +61,7 @@ export function ChartPie({ chartData } : { chartData: ChartPieDataType[] }) {
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[200px]"
+          className="mx-auto aspect-square max-h-[200px] w-[260px]"
         >
           <PieChart>
             <ChartTooltip
@@ -72,7 +72,7 @@ export function ChartPie({ chartData } : { chartData: ChartPieDataType[] }) {
               data={chartData}
               dataKey="quantity"
               nameKey="status"
-              innerRadius={60}
+              innerRadius={50}
               strokeWidth={5}
             >
               <Label
@@ -88,14 +88,14 @@ export function ChartPie({ chartData } : { chartData: ChartPieDataType[] }) {
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) - 2}
-                          className="fill-slate-600 text-3xl font-bold tracking-tighter"
+                          className="fill-slate-600 text-2xl font-bold tracking-tighter"
                         >
                           {totalSales.toLocaleString()}
                         </tspan>
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) + 18}
-                          className="fill-muted-foreground"
+                          className="fill-muted-foreground text-xs"
                         >
                           Vendas
                         </tspan>

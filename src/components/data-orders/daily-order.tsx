@@ -1,7 +1,7 @@
 "use client";
 
 import { OrderDataType } from "@/types";
-import { Card, CardContent } from "../ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { DataOrderTable } from "./data-order-table";
 
 
@@ -69,6 +69,14 @@ export function DailyOrder() {
 
     return (
         <Card className="w-full">
+            <CardHeader>
+                <CardTitle className="text-lg font-semibold text-slate-600 tracking-tighter">
+                    Pedidos do dia
+                </CardTitle>
+                <CardDescription className="text-xs font-light text-slate-600 tracking-tighter">
+                    Pedidos com instalação prevista para hoje
+                </CardDescription>
+            </CardHeader>
             <CardContent>
                 <DataOrderTable currentPage={1} totalOrders={10} totalPages={1} orders={dataDailyOrder}/>
             </CardContent>
