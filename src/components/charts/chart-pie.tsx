@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { TrendingUp } from "lucide-react"
 import { Label, Pie, PieChart } from "recharts"
 
 import {
@@ -50,7 +49,7 @@ export function ChartPie({ chartData } : { chartData: ChartPieDataType[] }) {
 
 
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col shadow-none border-slate-200">
       <CardHeader className="items-center pb-0 text-center">
         <CardTitle className="text-slate-600 font-semibold text-base tracking-tighter">
             Relatório de Vendas

@@ -2,7 +2,7 @@
 
 import { ChartNoAxesColumnIncreasing, HandCoins, Handshake } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
-import { formatCurrency, formatPercent } from "@/lib/utils";
+import { formatCurrency, formatPercent } from "@/utils/utils";
 
 
 

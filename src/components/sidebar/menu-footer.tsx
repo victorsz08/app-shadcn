@@ -1,7 +1,7 @@
 "use client";
 
 import { LucideIcon } from "lucide-react";
-import { SidebarGroup, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "../ui/sidebar";
+import { SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "../ui/sidebar";
 import { Collapsible } from "../ui/collapsible";
 import Link from "next/link";
 
@@ -20,7 +20,6 @@ export interface MenuFooterType {
 export function MenuFooter({ items }: { items: MenuFooterType[] }) {
 
     return (
-        <SidebarGroup>
             <SidebarMenu>
                 {items.map((item, index) => (
                     <Collapsible
@@ -44,6 +43,5 @@ export function MenuFooter({ items }: { items: MenuFooterType[] }) {
                     </Collapsible>
                 ))}
             </SidebarMenu>
-        </SidebarGroup>
     )
 };

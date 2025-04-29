@@ -1,10 +1,11 @@
 "use client";
 
-import { LucideIcon } from "lucide-react";
+
 import { usePathname } from "next/navigation";
 import { SidebarGroup, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem } from "../ui/sidebar";
 import { Collapsible } from "../ui/collapsible";
 import Link from "next/link";
+import { LucideIcon } from "lucide-react";
 
 
 
@@ -36,7 +37,7 @@ export function MenuItems({ items }: { items: MenuItemType[] }) {
                                 <SidebarMenuButton
                                     tooltip={item.title}
                                     isActive={pathname === item.href}
-                                    className="data-[active=true]:bg-purple-300 data-[active=true]:text-purple-700
+                                    className="data-[active=true]:bg-purple-300 data-[active=true]:text-purple-900
                                     cursor-pointer text-slate-500 font-normal"
                                 >
                                     <item.icon />
