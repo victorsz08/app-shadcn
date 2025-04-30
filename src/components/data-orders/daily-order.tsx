@@ -3,6 +3,8 @@
 import { OrderDataType } from "@/types";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card";
 import { DataOrderTable } from "./data-order-table";
+import { Separator } from "../ui/separator";
+import { CreateOrderForm } from "../forms/create-order";
 
 
 
@@ -78,6 +80,10 @@ export function DailyOrder() {
                 </CardDescription>
             </CardHeader>
             <CardContent>
+                <section className="flex justify-end">
+                    <CreateOrderForm/>
+                </section>
+                <Separator className="my-3"/>
                 <DataOrderTable currentPage={1} totalOrders={10} totalPages={1} orders={dataDailyOrder}/>
             </CardContent>
         </Card>

@@ -66,7 +66,7 @@ export function Reports() {
             {48}
         </CardReport>
         <CardReport
-            title="Vendas"
+            title="Instalações"
             icon={
                 <div className="bg-green-100 text-green-600 p-2 rounded-sm">
                     <ChartNoAxesColumnIncreasing size={16}/>
