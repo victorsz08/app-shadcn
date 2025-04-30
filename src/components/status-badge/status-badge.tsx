@@ -33,7 +33,7 @@ export function StatusBadge({ status }: StatusBadgeType) {
 
     return (
         <Badge className={`${classsesName} text-[11px] tracking-tight font-semibold flex items-center gap-1`}>
-            <Icon className="w-3 h-3"/>
+            <Icon className={`w-3 h-3 ${classsesName}`}/>
             {text}
         </Badge>
     )

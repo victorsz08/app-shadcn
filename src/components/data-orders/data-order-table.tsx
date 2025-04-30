@@ -95,7 +95,7 @@ export function DataOrderTable({
                   <StatusBadge status={order.status} />
                 </TableHead>
                 <TableHead className="justify-center flex items-center w-fit">
-                  <MenuOrder orderId={order.id} />
+                  <MenuOrder order={order} />
                 </TableHead>
               </TableRow>
             ))}

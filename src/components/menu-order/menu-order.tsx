@@ -9,12 +9,15 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import { Separator } from "../ui/separator";
+import { UpdateSchedulingForm } from "../forms/update-scheduling";
+import { OrderDataType } from "@/types";
+import { UpdateStatusForm } from "../forms/update-status";
 
 interface MenuOrderType {
-  orderId: string;
+  order: OrderDataType;
 }
 
-export function MenuOrder({ orderId }: MenuOrderType) {
+export function MenuOrder({ order }: MenuOrderType) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild className="w-fit h-fit">
@@ -26,13 +29,11 @@ export function MenuOrder({ orderId }: MenuOrderType) {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-full">
-        <DropdownMenuItem className="text-xs font-normal text-slate-600 cursor-pointer flex items-center gap-1">
-          <Calendar size={12} />
-          <span>Editar Agendamento</span>
+        <DropdownMenuItem asChild>
+            <UpdateSchedulingForm order={order}/>
         </DropdownMenuItem>
-        <DropdownMenuItem className="text-xs font-normal text-slate-600 cursor-pointer flex items-center gap-1">
-          <Settings2 size={12} />
-          <span>Editar Status</span>
+        <DropdownMenuItem asChild>
+          <UpdateStatusForm order={order}/>
         </DropdownMenuItem>
         <DropdownMenuItem className="text-xs font-normal text-slate-600 cursor-pointer flex items-center gap-1">
           <Info size={12} />
