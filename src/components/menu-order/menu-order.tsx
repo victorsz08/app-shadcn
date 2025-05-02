@@ -1,6 +1,6 @@
 "use client";
 
-import { Calendar, ChevronDown, Info, Settings2, Trash } from "lucide-react";
+import { Calendar, ChevronDown, EllipsisVertical, Info, Settings2, Trash } from "lucide-react";
 import { Button } from "../ui/button";
 import {
   DropdownMenu,
@@ -23,9 +23,8 @@ export function MenuOrder({ order }: MenuOrderType) {
     <DropdownMenu>
       <DropdownMenuTrigger asChild className="w-fit h-fit">
         <div>
-          <Button className="bg-slate-950 text-[11px] py-1 justify-between cursor-pointer  w-fit text-slate-50 flex items-center gap-1 h-fit">
-            <span>Editar</span>
-            <ChevronDown size={12} />
+          <Button variant="outline" className="border-none cursor-pointer w-fit h-fit text-slate-500">
+            <EllipsisVertical size={14} />
           </Button>
         </div>
       </DropdownMenuTrigger>

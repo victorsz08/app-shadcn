@@ -1,0 +1,56 @@
+{
+    "orders": [
+        {
+            "id": "1",
+            "number": 1,
+            "local": "Local 1",
+            "schedulingDate": "2024-06-01",
+            "schedulingTime": "08:00 as 12:00",
+            "contact": "Contato 1",
+            "price": 89.90,
+            "userId": 1,
+            "status": "PENDENTE",
+            "createdAt": "2024-06-02T11:00:00.000Z",
+            "updatedAt": "2024-06-02T11:00:00.000Z"
+        },
+        {
+            "id": "2",
+            "number": 2,
+            "local": "Local 2",
+            "schedulingDate": "2024-06-02",
+            "schedulingTime": "08:00 as 12:00",
+            "contact": "Contato 2",
+            "status": "CONECTADO",
+            "price": 89.90,
+            "userId": 1,
+            "createdAt": "2024-06-02T11:00:00.000Z",
+            "updatedAt": "2024-06-02T11:00:00.000Z"
+        },
+        {
+            "id": "3",
+            "number": 3,
+            "local": "Local 3",
+            "schedulingDate": "2024-06-03",
+            "schedulingTime": "08:00 as 12:00",
+            "contact": "Contato 3",
+            "status": "CENCELADO",
+            "price": 89.90,
+            "userId": 1,
+            "createdAt": "2024-06-02T11:00:00.000Z",
+            "updatedAt": "2024-06-02T11:00:00.000Z"
+        },
+        {
+            "id": "4",
+            "number": 4,
+            "local": "Local 4",
+            "schedulingDate": "2024-06-04",
+            "schedulingTime": "08:00 as 12:00",
+            "contact": "Contato 4",
+            "status": "CONECTADO",
+            "price": 89.90,
+            "userId": 1,
+            "createdAt": "2024-06-02T11:00:00.000Z",
+            "updatedAt": "2024-06-02T11:00:00.000Z"
+        }
+    ]
+}

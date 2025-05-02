@@ -13,7 +13,7 @@ export function NotFoundOrders() {
           width={120}
           height={120}
         />
-        <div className="flex flex-col items-center gap-1 justify-center">
+        <div className="flex flex-col items-center gap-3 justify-center">
           <p className="text-sm tracking-tight font-normal text-slate-500">
             Nenhum Pedido Encontrato
           </p>
