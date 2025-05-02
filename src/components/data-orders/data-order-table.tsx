@@ -91,8 +91,7 @@ export const DataOrderTable = ({
       setSelectedOrders([]);
       setIsDeleteDialogOpen(false);
     } else {
-      // Optionally, you could provide feedback that no orders were selected here.
-      setIsDeleteDialogOpen(false); // Ensure the dialog closes even if no orders are selected
+      setIsDeleteDialogOpen(false); 
     }
   }, [onOrdersDeleted, selectedOrders]);
 
@@ -154,15 +153,17 @@ export const DataOrderTable = ({
             </AlertDialogTrigger>
             <AlertDialogContent>
               <AlertDialogHeader>
-                <AlertDialogTitle>Confirmar exclusão</AlertDialogTitle>
-                <AlertDialogDescription>
+                <AlertDialogTitle className="text-slate-600 font-bold tracking-tighter text-lg">
+                  Confirmar exclusão
+                </AlertDialogTitle>
+                <AlertDialogDescription className="text-xs font-normal text-slate-500 tracking-tight">
                   Tem certeza que deseja excluir {selectedOrders.length}{" "}
                   pedido(s)? Esta ação não pode ser desfeita.
                 </AlertDialogDescription>
               </AlertDialogHeader>
               <AlertDialogFooter>
-                <AlertDialogCancel>Cancelar</AlertDialogCancel>
-                <AlertDialogAction onClick={handleDeleteSelectedOrders}>
+                <AlertDialogCancel className="font-normal">Cancelar</AlertDialogCancel>
+                <AlertDialogAction className="bg-red-600 text-slate-50 font-normal" onClick={handleDeleteSelectedOrders}>
                   Excluir
                 </AlertDialogAction>
               </AlertDialogFooter>
