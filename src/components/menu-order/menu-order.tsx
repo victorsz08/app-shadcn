@@ -12,6 +12,7 @@ import { Separator } from "../ui/separator";
 import { UpdateSchedulingForm } from "../forms/update-scheduling";
 import { OrderDataType } from "@/types";
 import { UpdateStatusForm } from "../forms/update-status";
+import { UpdateDetailsForm } from "../forms/update-details";
 
 interface MenuOrderType {
   order: OrderDataType;
@@ -35,9 +36,8 @@ export function MenuOrder({ order }: MenuOrderType) {
         <DropdownMenuItem asChild>
           <UpdateStatusForm order={order}/>
         </DropdownMenuItem>
-        <DropdownMenuItem className="text-xs font-normal text-slate-600 cursor-pointer flex items-center gap-1">
-          <Info size={12} />
-          <span>Editar Informações</span>
+        <DropdownMenuItem asChild>
+          <UpdateDetailsForm order={order}/>
         </DropdownMenuItem>
         <Separator />
         <DropdownMenuItem className="text-xs font-normal text-red-600 cursor-pointer flex items-center gap-1">

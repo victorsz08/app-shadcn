@@ -5,8 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui
 import { DataOrderTable } from "./data-order-table";
 import { Separator } from "../ui/separator";
 import { CreateOrderForm } from "../forms/create-order";
-
-
+import { useState, useEffect, useCallback } from "react";
 
 const dataDailyOrder: OrderDataType[] = [
     {
@@ -67,7 +66,28 @@ const dataDailyOrder: OrderDataType[] = [
 
 
 export function DailyOrder() {
+    const [currentPage, setCurrentPage] = useState(1);
+    const [totalOrders, setTotalOrders] = useState(0);
+    const [totalPages, setTotalPages] = useState(1);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
+    const loadDailyOrders = useCallback(async (page: number) => {
+        setIsLoading(true);
+        setError(null);
+    }, []);
+
+    const handlePageChange = useCallback((newPage: number) => {
+        loadDailyOrders(newPage);
+    }, [loadDailyOrders]);
+
+    const handleOrdersDeleted = useCallback(async (orderIds: string[]) => {
+
+    }, [currentPage, loadDailyOrders]);
+
+    useEffect(() => {
+        loadDailyOrders(currentPage);
+    }, [loadDailyOrders, currentPage]);
 
     return (
         <Card className="w-full">
@@ -80,12 +100,16 @@ export function DailyOrder() {
                 </CardDescription>
             </CardHeader>
             <CardContent>
-                <section className="flex justify-end">
-                    <CreateOrderForm/>
-                </section>
                 <Separator className="my-3"/>
-                <DataOrderTable currentPage={1} totalOrders={10} totalPages={1} orders={dataDailyOrder}/>
+                <DataOrderTable
+                    orders={dataDailyOrder}
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    totalOrders={totalOrders}
+                    onPageChange={handlePageChange}
+                    onOrdersDeleted={handleOrdersDeleted}
+                />
             </CardContent>
         </Card>
-    )
+    );
 }
